@@ -1,1 +1,8 @@
 /* CSS declarations go here */
+
+#uploaderComp{
+  text-align: center;
+  padding: 25px;  
+  background-color: yellow;
+  
+}

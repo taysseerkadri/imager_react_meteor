@@ -21,16 +21,16 @@ export default class Gallery extends Component {
       
   renderImageCards() {
       return this.getImages().map((image) => 
-      <Col s={12} m={6} l={3}>
-       <a href={image.imgPath}>
-        <Card 
-          key={image._id} 
-          className='reveal'
-	        header={<CardTitle key={image._id} image={image.imgPath}></CardTitle>}
-	        actions={[<a href={image.imgPath}>{image.title}</a>, <a href={image.imgPath}>#Tag1</a>, <a href="http://www.google.com">#Google</a>]}>
-          Stats Stats Stats
-        </Card>
-        </a>
+      <Col s={12} m={6} l={3} key={image._id}>
+       <a href={image.imgPath} key={image._id}>
+				 <Card
+					 	key={image._id}
+						className='reveal'
+						header={<CardTitle key={image._id} image={image.imgPath}></CardTitle>}
+						actions={[<a href={image.imgPath} key={image._id}>{image.title}</a>, <a href={image.imgPath}>#Tag1</a>, <a href="http://www.google.com">#Google</a>]}>
+						Stats Stats Stats
+				 </Card>
+       </a>
      </Col>
       );
       }
